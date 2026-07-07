@@ -22,10 +22,25 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
+For checking the configuration, we can use this command:
+
+```bash
+git config --list
+
+# or if we want to check a specific configuration, we can use this command:
+git config user.name
+git config user.email
+
+# or if we want to check a specific global configuration, we can use this command:
+git config --global user.name
+git config --global user.email
+```
+
 - step 2: sign up on github 
 - step 3: create a new repository on GitHub 
 - step 4: create a new project folder on our computer and do this command in the terminal once inside the project folder: 
-```
+
+```bash
 git init
 git add . 
 git commit -m "first commit"
@@ -34,10 +49,21 @@ git remote add origin https://github.com/muhammad-tamim/test.git
 git push -u origin main
 ```
 
+here, 
+  - `git init` initializes a new Git repository in the current folder.
+  - `git add .` stages all the files in the current folder for the next commit.
+    - you can use `git add <file_name>` to stage a specific file.
+  - `git commit -m "first commit"` creates a new commit (snapshot) with the staged files and a message describing the changes.
+  - `git branch -M main` renames the default branch to "main".
+  - `git remote add origin https://github.com/muhammad-tamim/test.git` adds a remote repository named "origin" with the specified URL.
+  - `git push -u origin main` pushes the local "main" branch to the remote repository and sets it as the upstream branch.
+  - `git push` uploads the local commits to the remote repository.
+
 Note: after this `git remote add origin https://github.com/muhammad-tamim/test.git` command we need to sign in to our github by browser.
 
 
-for later commits we we just need to follow these three commands:
+- step 5: after that we can do the following commands to push our changes to github:
+
 ```bash
 git add .
 git commit -m "message"
@@ -46,7 +72,6 @@ git push
 
 
 
-- For GitHub we need to create an account on the GitHub website. 
 
 ## 1.2. What is Git and GitHub?
 - Git is a distributed version control system that helps us to track changes in our code. 

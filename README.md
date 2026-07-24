@@ -9,6 +9,7 @@
     - [1.4.2. Distributed Version Control (DVCS):](#142-distributed-version-control-dvcs)
   - [1.5. Key Git Concepts:](#15-key-git-concepts)
   - [1.6. Why Git:](#16-why-git)
+- [2. Git stages and status:](#2-git-stages-and-status)
 
 
 # 1. Introduction:
@@ -165,3 +166,21 @@ That's why Git is called distributed.
 - Branching and merging – Experiment with features in separate branches and merge them later.
 - Backup and synchronization – Services like GitHub, GitLab, and Bitbucket can host Git repositories online.
 
+# 2. Git stages and status: 
+
+![images](./assets/images/stages/stages.png)
+
+There are three main stages in Git:
+1. Working Directory: This is where we make changes to our files before they are tracked by Git. It shows a status called `untracked` for new files and `modified` for existing files that have been changed but not yet staged.
+
+![alt text](./assets/images/stages/un-tracked.png)
+![alt text](./assets/images/stages/modified.png)
+
+2. Staging Area: This is where we used command like `git add filename` or `git add .`  to stage our changes for commit. It shows a status called `staged or added` for files that are ready to be committed. 
+   - We can use `git reset filename` to unstage a file or `git reset` to unstage all files if we change our mind.
+
+![alt text](./assets/images/stages/added.png)
+
+3. Repository: This is where we used `git commit -m "Meaningful message"` to commit our changes. Once we commit our changes, they become part of the repository's history. It shows 
+
+![alt text](./assets/images/stages/commit.png)
